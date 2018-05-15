@@ -45,14 +45,14 @@ public class ConsultarSala extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 		
-		String v1 = " ";
+		 
 		
-		v1 = (request.getParameter("nome"));
-		Double v2 = Double.parseDouble(request.getParameter("curso"));
+		String nome = (request.getParameter("nome"));
+		Double curso = Double.parseDouble(request.getParameter("curso"));
 		
 		OrganizadorSala organizarSala = new OrganizadorSala();
 		
-		String result = organizarSala.organizarSala(v1, v2);
+		String result = organizarSala.organizarSala(nome, curso);
 		
 		request.setAttribute("resultado", result);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/consultas/ConsultarSala.jsp");

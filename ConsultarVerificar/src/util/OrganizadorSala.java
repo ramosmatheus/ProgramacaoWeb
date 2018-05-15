@@ -2,18 +2,20 @@ package util;
 
 public class OrganizadorSala {
 
-	public String organizarSala(String v1, double v2) {
+	public String organizarSala(String nome, double curso) {
 
-		char sigl = v1.charAt(0);	//Pegando a primeira letra da palavra e transformando em Char
-		String sigla = String.valueOf(sigl);     //Transformando a variavel sigl de Char para String
-
-		if (v2 == 1) {
+		
+		if (curso == 1) {
 			return "Sala 22";
 
-		} else if (v2 == 2) {
+		} else if (curso == 2) {
 
 			return "Sala 21";
-		} else if (v2 == 3) {
+		} else if (curso == 3) {
+			
+			char sigl = nome.charAt(0);	//Pegando a primeira letra da palavra e transformando em Char
+			String sigla = String.valueOf(sigl);     //Transformando a variavel sigl de Char para String
+
 
 			if (sigla.equalsIgnoreCase("a") || sigla.equalsIgnoreCase("b") || sigla.equalsIgnoreCase("c")
 					|| sigla.equalsIgnoreCase("d") || sigla.equalsIgnoreCase("e") || sigla.equalsIgnoreCase("f")

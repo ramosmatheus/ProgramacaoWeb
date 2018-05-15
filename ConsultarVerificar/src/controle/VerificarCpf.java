@@ -42,11 +42,11 @@ public class VerificarCpf extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 		
-		String v1 = (request.getParameter("cpf"));
+		String cpf = (request.getParameter("cpf"));
 		
 		ValidarCpf validarCpf = new ValidarCpf();
 		
-		String result = validarCpf.validarCpf(v1);		
+		String result = validarCpf.validarCpf(cpf);		
 		
 		
 		request.setAttribute("resultado", result);

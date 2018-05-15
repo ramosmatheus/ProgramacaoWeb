@@ -41,11 +41,11 @@ public class VerificarPlaca extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 		
-		String v1 = (request.getParameter("placa"));
+		String placa = (request.getParameter("placa"));
 		
 		ValidarPlaca validarPlaca = new ValidarPlaca();
 		
-		String result = validarPlaca.validarPlaca(v1);
+		String result = validarPlaca.validarPlaca(placa);
 		
 		request.setAttribute("resultado", result);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/verificacoes/VerificarPlaca.jsp");
